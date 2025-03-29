@@ -74,8 +74,10 @@ $env:Path += ";C:\Users\USER\AppData\Local\Packages\PythonSoftwareFoundation.Pyt
 jobinfo FILENAME -u USER [-a] [-r] [-c] [-m] [-s] [-v] [-h]
 ```
 
+### Positional Arguments
+- `FILENAME` job information file in [CSV](https://www.loc.gov/preservation/digital/formats/fdd/fdd000323.shtml) format.
+
 ### Options
-- `-h`, `--help` shows the help message and exits.
 - `-u USER`, `--user USER` the username.
 - `-a`, `--alloc` show allocation code(s).
 - `-r`, `--recent` show most recent job ID.
@@ -83,16 +85,17 @@ jobinfo FILENAME -u USER [-a] [-r] [-c] [-m] [-s] [-v] [-h]
 - `-m`, `--mem` show total memory usage in GB.
 - `-s`, `--simple` simple output formatting (no table).
 - `-v`, `--version` prints version information and exits.
+- `-h`, `--help` shows the help message and exits.
 
 ### Examples
 Let's try out a few examples with a [`test.csv`](./tests/test.csv). This files contains the following information.
-```
+
 |Username|Allocation|JobID |CPUs|JobDuration|Memory|
 |--------|----------|------|----|-----------|------|
 |user1   |alloc-1   |111111|16  |1800       |180   |
 |user2   |alloc-2   |222222|8   |600        |36    |
 |user2   |alloc-3   |333333|32  |480        |600   |
-```
+
 
 - Extract the allocation code(s) for user `user1`. 
 ```console
@@ -102,7 +105,7 @@ jobinfo test.csv -u user1 -a
 
 - Extract the total CPU and memory usage for user `user2`. 
 ```console
-jobinfo test.csv -u user2 -a
+jobinfo test.csv -u user2 -cm
 ```
 ![test-1](./docs/test-2.png)
 
