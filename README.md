@@ -60,7 +60,7 @@ pip install --user jobinfo
 ```
 
 #### Method 2
-- If installation method 1 fails, you can get the source code and build from scratch.
+- If installation through [method 1](https://github.com/ahama92/jobinfo#method-1) fails, you can get the source code and build from scratch.
 ```console
 git clone https://github.com/ahama92/jobinfo.git
 cd jobinfo
