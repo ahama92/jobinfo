@@ -1,4 +1,4 @@
-# What is jobinfo?
+# What is `jobinfo`?
 Researchers on a Linux-based computing system submit computing jobs to run and process their research data. Information on these jobs is collated in an output table as they run and provide a record of the resources used by the job. [`jobinfo`](https://github.com/ahama92/jobinfo) extracts useful information from such tables, including,
 - Allocation code(s) corresponding to a user.
 - Most recently submitter job ID.
@@ -65,3 +65,5 @@ or
     $env:Path += ";C:\Users\USER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\Scripts"
 ```
 - Don't forget to change the path to that one you just copied, not my example!
+
+# Software Prerequisites
