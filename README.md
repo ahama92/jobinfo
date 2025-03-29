@@ -49,7 +49,7 @@ or
 ```
 
 ## Troubleshooting
-- If you use Windows, I highly recommend installing [the Ubuntu app from Microsoft Store](https://apps.microsoft.com/detail/9PDXGNCFSCZV?hl=en-us&gl=CA&ocid=pdpshare) and using it as your daily driver. This way you can stay in Windows but enjoy most of what Linux offers.
+- If you use Windows, I highly recommend installing [the Ubuntu app from Microsoft Store](https://apps.microsoft.com/detail/9PDXGNCFSCZV?hl=en-us&gl=CA&ocid=pdpshare) and using it as your daily driver. This way you can stay in Windows but enjoy most of what Linux has to offers.
 - If you still want to use Windows for some reason and you face issues with running `jobinfo`, here are some possible remedies.
 - Check if `jobinfo` was installed.
 ```console
