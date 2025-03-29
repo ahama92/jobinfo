@@ -3,5 +3,5 @@
 
 # Installation Method 1 (Recommended)
 ```
-pip install jobinformation
+pip install -upgrade jobinfo
 ```
