@@ -11,8 +11,8 @@ def main():
     parser = argparse.ArgumentParser(description='Easily extract useful information about your jobs',
                                      epilog=f'''
 Example usage:
-  ./jobinfo.py -f FILE -u USER -a\t Shows the allocation code(s)
-  ./jobinfo.py -f FILE -u USER -cms\t Shows the total CPU and memoray usage in simple formatting
+  jobinfo FILENAME -u USER -a\t Shows the allocation code(s)
+  jobinfo FILENAME -u USER -cms\t Shows the total CPU and memoray usage in simple formatting
 
 This tool assumes your job information file is in CSV format with exactly the following header,
 Username,Allocation,JobID,CPUs,JobDuration,Memory
@@ -22,7 +22,7 @@ Username,Allocation,JobID,CPUs,JobDuration,Memory
 {cowsay.get_output_string("cow", "Written by Mohammad Zandsalimy")}
                                      ''',
                                      formatter_class=argparse.RawDescriptionHelpFormatter, add_help=True)
-    parser.add_argument('-f', '--file', required=True, help='job information file (CSV)')
+    parser.add_argument('FILENAME',  help='job information file (CSV)')
     parser.add_argument('-u', '--user', required=True, help='the username')
     parser.add_argument('-a', '--alloc', action='store_true', help='show allocation code(s)')
     parser.add_argument('-r', '--recent', action='store_true', help='show most recent job ID')
@@ -35,7 +35,7 @@ Username,Allocation,JobID,CPUs,JobDuration,Memory
 
     try:
         # Read and parse the job information file
-        with open(args.file, 'r') as file:
+        with open(args.FILENAME, 'r') as file:
             csv_reader = csv.DictReader(file)
             jobs = [row for row in csv_reader if row['Username'] == args.user]
             
