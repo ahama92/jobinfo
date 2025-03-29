@@ -1,0 +1,4 @@
+Username,Allocation,JobID,CPUs,JobDuration,Memory
+user1,alloc-1,111111,16,1800,180
+user2,alloc-2,222222,8,600,36
+user2,alloc-3,333333,32,480,600
