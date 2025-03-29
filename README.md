@@ -24,7 +24,6 @@ python -m pip install --upgrade pip
 ```
 
 ### Option A: `pipx` Installation (highly recommended)
-#### Method 1
 - Install latest version of [`pipx`](https://github.com/pypa/pipx).
 
 - Run the following command to install `jobinfo`.
@@ -33,7 +32,6 @@ pipx install jobinfo
 ```
 
 ### Option B: Virtual Environment Installation (recommended)
-#### Method 1
 - Create and activate a virtual environment.
 ```console
 python -m venv testenv
