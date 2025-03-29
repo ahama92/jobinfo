@@ -42,11 +42,6 @@ or
     pip install -e .
 ```
 
-- Confirm the installation was successful.
-```console
-    jobinfo --version
-```
-
 ## Installation Confirmation
 - Check if `jobinfo` is installed correctly.
 ```console
