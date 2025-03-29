@@ -4,7 +4,7 @@ install:
 	pip install -e .
 
 uninstall:
-	pip uninstall -y jobinformation
+	pip uninstall -y jobinfo
 
 reinstall: uninstall install
 

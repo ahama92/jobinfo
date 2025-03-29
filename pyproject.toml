@@ -3,7 +3,7 @@ requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "jobinformation"
+name = "jobinfo"
 dynamic = ["version"]
 authors = [
     {name = "Mohammad Zandsalimy", email = "mohammad.91225@gmail.com"},
@@ -11,7 +11,7 @@ authors = [
 description = "This tool extracts useful information about scheduled jobs."
 readme = "README.md"
 requires-python = ">=3.6"
-license = {text = "MIT"}
+license = "MIT"
 classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
@@ -23,14 +23,14 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/ahama92/jobinformation"
-"Bug Tracker" = "https://github.com/ahama92/jobinformation/issues"
+Homepage = "https://github.com/ahama92/jobinfo"
+"Bug Tracker" = "https://github.com/ahama92/jobinfo/issues"
 
 [project.scripts]
-jobinfo = "jobinformation.main:main"
+jobinfo = "jobinfo.main:main"
 
 [tool.setuptools]
-package-dir = {"jobinformation" = "src/jobinformation"}
+package-dir = {"jobinfo" = "src/jobinfo"}
 
 [tool.setuptools.dynamic]
-version = {attr = "jobinformation.__version__"}
+version = {attr = "jobinfo.__version__"}
