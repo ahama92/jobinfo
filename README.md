@@ -85,7 +85,7 @@ jobinfo FILENAME -u USER [-a] [-r] [-c] [-m] [-s] [-v] [-h]
 - `-v`, `--version` prints version information and exits.
 
 ### Examples
-Let's try out a few examples with the [`test.csv`](./tests/test.csv). This files contains the following information.
+Let's try out a few examples with a [`test.csv`](./tests/test.csv). This files contains the following information.
 ```
 |Username|Allocation|JobID |CPUs|JobDuration|Memory|
 |--------|----------|------|----|-----------|------|
