@@ -1,5 +1,5 @@
 # What is jobinfo?
-Researchers on a Linux-based computing system submit computing jobs to run and process their research data. Information on these jobs is collated in an output table as they run and provide a record of the resources used by the job. This tool extracts useful information from such tables, including,
+Researchers on a Linux-based computing system submit computing jobs to run and process their research data. Information on these jobs is collated in an output table as they run and provide a record of the resources used by the job. [`jobinfo`](https://github.com/ahama92/jobinfo) extracts useful information from such tables, including,
 - Allocation code(s) corresponding to a user.
 - Most recently submitter job ID.
 - Total CPU usage in core-hours.
@@ -43,6 +43,12 @@ or
 ```
 
 - Confirm the installation was successful.
+```console
+    jobinfo --version
+```
+
+## Installation Confirmation
+- Check if `jobinfo` is installed correctly.
 ```console
     jobinfo --version
 ```
