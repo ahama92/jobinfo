@@ -60,8 +60,8 @@ or
 - Then go one step up. In my example it would be the `python39\` folder.
 - Then go to the `Scripts` folder.
 - Copy the path.
-- Then open a Windows PowerShell and type the following command.
+- Then type the following command in a Windows PowerShell.
 ```console
     $env:Path += ";C:\Users\USER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\Scripts"
 ```
-- Don't forget to change add the path that you just copied not my example!
+- Don't forget to change the path to that one you just copied, not my example!
