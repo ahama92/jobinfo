@@ -5,6 +5,7 @@ install:
 
 uninstall:
 	pip uninstall -y jobinfo
+	pipx uninstall jobinfo
 
 reinstall: uninstall install
 
