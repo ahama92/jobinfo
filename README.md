@@ -75,7 +75,7 @@ jobinfo FILENAME -u USER [-a] [-r] [-c] [-m] [-s] [-v] [-h]
 ```
 
 ### Positional Arguments
-- `FILENAME` job information file in [CSV](https://www.loc.gov/preservation/digital/formats/fdd/fdd000323.shtml) format.
+- `FILENAME` job information file in [CSV](https://datatracker.ietf.org/doc/html/rfc4180) format.
 
 ### Options
 - `-u USER`, `--user USER` the username.
@@ -116,7 +116,7 @@ jobinfo test.csv -u user2 -arcms
 ![test-1](./docs/test-3.png)
 
 ### Notes
-Make sure the input file is in [CSV](https://www.loc.gov/preservation/digital/formats/fdd/fdd000323.shtml) format with exactly the following header,
+Make sure the input file is in [CSV](https://datatracker.ietf.org/doc/html/rfc4180) format with exactly the following header,
 ```
 Username,Allocation,JobID,CPUs,JobDuration,Memory
 ```
