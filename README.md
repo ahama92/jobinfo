@@ -35,7 +35,7 @@ or
 ```
 
 ## Install the Package (method 2)
-- If the `pip` installation fails, you can get the source code and build from scratch.
+- If installation method 1 fails, you can get the source code and build from scratch.
 ```console
     git clone https://github.com/ahama92/jobinfo.git
     cd jobinfo
