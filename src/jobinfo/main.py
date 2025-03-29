@@ -1,41 +1,10 @@
 #!/usr/bin/python3
 
-import argparse
 import csv
-from . import __version__
 import cowsay
-
-def table(data, simple):
-    '''
-    Create an ASCII table to format the output.
-    
-    Args:
-        data list[mxn]: The data to be formatted.
-        simple (boolean): Indicates if simple formatting (no table) is requested.
-    
-    Returns:
-        str: The formatted string to be printed to the standard output.
-        
-    Examples usage:
-        >>> table([['item (1,1)', 'item (1,2)'], ['item (2,1)', 'item (2,2)']], Fasle)
-    '''
-    
-    width = [max([len(row[i]) for row in data]) for i in range(len(data[0]))]
-    
-    output = 'ERROR: Analysis done but output text was not formatted correctly!'
-    if (simple):
-        output = ''
-        for row in data:
-            data_row = ': '.join(f'{str(cell).ljust(w)} ' for cell, w in zip(row, width)) + '\n'
-            output += data_row
-    else:
-        border = '+' + '+'.join(['-' * (w + 2) for w in width]) + '+\n'
-        output = border
-        for row in data:
-            data_row = '|' + '|'.join(f' {str(cell).ljust(w)} ' for cell, w in zip(row, width)) + '|\n'
-            output += data_row + border
-
-    return output
+import argparse
+from . import __version__
+from tabulate import tabulate
 
 def main():
     # Set up the argument parser
@@ -100,7 +69,10 @@ Username,Allocation,JobID,CPUs,JobDuration,Memory
             if not any([args.alloc, args.recent, args.cpu, args.mem]):
                 parser.print_help()
             else:
-                print(table(output, args.simple))
+                if (args.simple):
+                    print(tabulate(output, tablefmt='plain'))
+                else:
+                    print(tabulate(output, tablefmt='grid'))
     
     # Error handling
     except FileNotFoundError:

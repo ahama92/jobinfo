@@ -20,6 +20,7 @@ classifiers = [
 ]
 dependencies = [
     "cowsay>=6.0",
+    "tabulate>=0.8",
 ]
 
 [project.urls]
