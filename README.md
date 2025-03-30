@@ -23,8 +23,8 @@ python3 --version
 python -m pip install --upgrade pip
 ```
 
-### Option A: `pipx` Installation (highly recommended)
-- Install latest version of [`pipx`](https://github.com/pypa/pipx).
+### Option A: `pipx` Installation (recommended)
+- Install the latest version of [`pipx`](https://github.com/pypa/pipx).
 
 - Run the following command to install `jobinfo`.
 ```console
@@ -48,8 +48,7 @@ deactivate
 ```
 
 ### Option C: Global Installation (not recommended)
-#### Method 1
-- The easiest way is to use `pip` package manager.
+- Use `pip` package manager.
 ```console
 pip install --upgrade jobinfo
 ```
@@ -59,11 +58,19 @@ pip install --upgrade jobinfo
 pip install --user jobinfo
 ```
 
-#### Method 2
-- If installation through [method 1](https://github.com/ahama92/jobinfo#method-1) fails, you can get the source code and build from scratch.
+### Option D: Build From Source
+- Download the source code.
 ```console
 git clone https://github.com/ahama92/jobinfo.git
 cd jobinfo
+```
+
+- You may choose to use a virtual environment (recommended) or install globally (not recommended) just like before.
+```console
+pipx install -e .
+```
+or 
+```console
 pip install -e .
 ```
 
@@ -74,7 +81,7 @@ jobinfo --version
 ```
 
 ### Troubleshooting
-If you use Windows, I highly recommend installing [the Ubuntu app from Microsoft Store](https://apps.microsoft.com/detail/9PDXGNCFSCZV?hl=en-us&gl=CA&ocid=pdpshare) and using it as your daily driver. This way you can stay in Windows but enjoy most of what Linux has to offers. If you still want to use Windows for some reason and you face issues with running `jobinfo`, here are some possible remedies.
+If you use Windows, I highly recommend installing [the Ubuntu terminal environment](https://apps.microsoft.com/detail/9PDXGNCFSCZV?hl=en-us&gl=CA&ocid=pdpshare) from Microsoft Store. This app provides a lot of what a Linux terminal has to offer. You can do all of your research work and computations from this terminal. If for some reason, you still want to use Windows and you face issues with running `jobinfo`, here are some possible remedies.
 - Check if `jobinfo` was installed.
 ```console
 pip show jobinfo
