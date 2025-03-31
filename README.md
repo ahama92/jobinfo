@@ -1,5 +1,6 @@
 # What is `jobinfo`?
 Researchers on a Linux-based computing system submit computing jobs to run and process their research data. Information on these jobs is collated in an output table as they run and provide a record of the resources used by the job. [`jobinfo`](https://github.com/ahama92/jobinfo) extracts useful information from such tables, including,
+
 - Allocation code(s) corresponding to a user.
 - Most recently submitter job ID.
 - Total CPU usage in core-hours.
@@ -18,7 +19,7 @@ python3 --version
 
 - If you don't have Python 3.6+ installed, go to [the official webpage](https://www.python.org/downloads/) and follow the instructions to install the latest version.
 
-- `pip` Should come with Python, but ensure it's up to date.
+- `pip` should come with Python, but ensure it's up to date.
 ```console
 python -m pip install --upgrade pip
 ```
@@ -26,9 +27,10 @@ python -m pip install --upgrade pip
 ### Option A: `pipx` Installation (recommended)
 - Install the latest version of [`pipx`](https://github.com/pypa/pipx).
 
-- Run the following command to install `jobinfo`.
+- Run the following commands to install `jobinfo`.
 ```console
 pipx install jobinfo
+pipx upgrade jobinfo
 ```
 
 ### Option B: Virtual Environment Installation (recommended)
@@ -40,7 +42,7 @@ testenv\Scripts\activate     # Windows
 ```
 - Run the following command to install `jobinfo`.
 ```console
-pip install jobinfo
+pip install --upgrade jobinfo
 ```
 - After your work is done deactivate the virtual environment.
 ```console
@@ -67,11 +69,11 @@ cd jobinfo
 
 - You may choose to use a virtual environment (recommended) or install globally (not recommended) just like before.
 ```console
-pipx install -e .
+pipx install .
 ```
 or 
 ```console
-pip install -e .
+pip install .
 ```
 
 ### Installation Confirmation
@@ -82,6 +84,7 @@ jobinfo --version
 
 ### Troubleshooting
 If you use Windows, I highly recommend installing [the Ubuntu terminal environment](https://apps.microsoft.com/detail/9PDXGNCFSCZV?hl=en-us&gl=CA&ocid=pdpshare) from Microsoft Store. This app provides a lot of what a Linux terminal has to offer. You can do all of your research work and computations from this terminal. If for some reason, you still want to use Windows and you face issues with running `jobinfo`, here are some possible remedies.
+
 - Check if `jobinfo` was installed.
 ```console
 pip show jobinfo
@@ -120,7 +123,7 @@ jobinfo FILENAME -u USER [-a] [-r] [-c] [-m] [-s] [-v] [-h]
 - `-h`, `--help` shows the help message and exits.
 
 ### Examples
-Let's try out a few examples with a [`test.csv`](./tests/test.csv). This files contains the following information.
+Let's try out a few examples with a [`test.csv`](https://github.com/ahama92/jobinfo/blob/main/tests/test.csv). This files contains the following information.
 
 |Username|Allocation|JobID |CPUs|JobDuration|Memory|
 |--------|----------|------|----|-----------|------|
@@ -129,23 +132,23 @@ Let's try out a few examples with a [`test.csv`](./tests/test.csv). This files c
 |user2   |alloc-3   |333333|32  |480        |600   |
 
 
-- Extract the allocation code(s) for user `user1`. 
+- **Test-1:** Extract the allocation code(s) for user `user1`. 
 ```console
 jobinfo test.csv -u user1 -a
 ```
-![test-1](./docs/test-1.png)
+![Test-1](./docs/test-1.png)
 
-- Extract the total CPU and memory usage for user `user2`. 
+- **Test-2:** Extract the total CPU and memory usage for user `user2`. 
 ```console
 jobinfo test.csv -u user2 -cm
 ```
-![test-1](./docs/test-2.png)
+![Test-2](./docs/test-2.png)
 
-- Extract allocation code(s), most recent job ID, as well as total CPU and memory usage for user `user2`. Print the output in simple formatting with no table. 
+- **Test-3:** Extract allocation code(s), most recent job ID, as well as total CPU and memory usage for user `user2`. Print the output in simple formatting with no table. 
 ```console
 jobinfo test.csv -u user2 -arcms
 ```
-![test-1](./docs/test-3.png)
+![Test-3](./docs/test-3.png)
 
 ### Notes
 Make sure the input file is in [CSV](https://datatracker.ietf.org/doc/html/rfc4180) format with exactly the following header,
