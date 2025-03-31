@@ -48,7 +48,7 @@ deactivate
 ```
 
 ### Option C: Global Installation (not recommended)
-- Use `pip` package manager.
+- Use [`pip`](https://pypi.org/project/pip/) package manager.
 ```console
 pip install --upgrade jobinfo
 ```
@@ -59,7 +59,7 @@ pip install --user jobinfo
 ```
 
 ### Option D: Build From Source
-- Download the source code.
+- Download the source code either using the following command or as a `.zip` package.
 ```console
 git clone https://github.com/ahama92/jobinfo.git
 cd jobinfo
