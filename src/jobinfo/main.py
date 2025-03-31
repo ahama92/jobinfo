@@ -76,7 +76,7 @@ Username,Allocation,JobID,CPUs,JobDuration,Memory
     
     # Error handling
     except FileNotFoundError:
-        print(f'ERROR: Job information file `{args.FILENAME}` was not found.')
+        print(f'ERROR: Job information file `{args.FILENAME}` was not found')
     except Exception as e:
         print(f'ERROR: Exception in processing data {str(e)}')
 
