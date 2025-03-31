@@ -19,3 +19,6 @@ test:
 clean:
 	rm -fr build/ dist/ ./src/*.egg-info/ *.egg-info/ egg-info/ __pycache__/ .pytest_cache/
 	find . -type d -name '__pycache__' -exec rm -fr {} +
+
+user-guide:
+	pandoc README.md -o user-guide.pdf
